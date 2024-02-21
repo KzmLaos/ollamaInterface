@@ -21,9 +21,11 @@ RUN pip3 install numpy jupyter pandas joblib xgboost scikit-image scikit-learn p
 RUN pip3 install ipywidgets --break-system-packages
 
 USER debian
-RUN git clone https://github.com/KzmLaos/ollamaInterface.git
+ADD ollamaInterface /home/debian/ollamaInterface 
+#RUN git clone https://github.com/KzmLaos/ollamaInterface.git
 
 EXPOSE 8888
+
 RUN chmod 755 /home/debian/ollamaInterface/initScript.bash
 #For Windows users
 RUN sed -i -e 's/\r$//' /home/debian/ollamaInterface/initScript.bash
