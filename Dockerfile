@@ -27,6 +27,7 @@ EXPOSE 8888
 RUN chmod 755 /home/debian/ollamaInterface/initScript.bash
 #For Windows users
 RUN sed -i -e 's/\r$//' /home/debian/ollamaInterface/initScript.bash
-CMD ["/home/debian/ollamaInterface/initScript.bash"]
+ENTRYPOINT ["/home/debian/ollamaInterface/initScript.bash"]
+CMD ["echo","Default argument for CMD instruction"]
 #USER root
 
