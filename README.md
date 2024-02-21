@@ -13,3 +13,10 @@ For Linux-based distributions:
 ```
 sudo docker run -it -network host ollamainterface:latest
 ```
+There are two options for running the container: Deploy and Develop. To use them open the container with
+```
+sudo docker run -it --rm -p 8888:8888 ollamainterface:latest deploy
+```
+```
+sudo docker run -it --rm -p 8888:8888 -v  $HOME/ollamaInterface/ollamaInterface/frontend:/home/debian/develop ollamainterface:latest develop
+```
