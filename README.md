@@ -30,9 +30,6 @@ sudo docker run -it --rm -p 8888:8888 -v $HOME/ollamaInterface/ollamaInterface/f
 ```
 To open a bash and debug, use bash:
 ```
-sudo docker run -it --rm -p 8888:8888 -v 
-$HOME/ollamaInterface/ollamaInterface/frontend:/home/debian/develop -v 
-$HOME/ollamaInterface/models:/home/debian/models ollamainterface:latest 
-bash
+sudo docker run -it --rm -p 8888:8888 -v $HOME/ollamaInterface/ollamaInterface/frontend:/home/debian/develop -v $HOME/ollamaInterface/models:/home/debian/models ollamainterface:latest bash
  ```
 
