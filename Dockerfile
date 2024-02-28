@@ -18,11 +18,12 @@ USER root
 #RUN source /home/debian/env/python/bin/activate
 RUN pip3 install --upgrade pip --break-system-packages
 RUN pip3 install numpy jupyter pandas joblib xgboost scikit-image scikit-learn python-afl voila ipyvuetify jupyter_contrib_nbextensions voila-vuetify bqplot deap --break-system-packages
-RUN pip3 install ipywidgets --break-system-packages
+RUN pip3 install ipywidgets ollama --break-system-packages
 
 #Installing Ollama
 RUN curl -fsSL https://ollama.com/install.sh | sh
 
+RUN pip3 install ipyflex plotly --break-system-packages
 USER debian
 WORKDIR /home/debian/
 COPY ollamaInterface /home/debian/ollamaInterface 
