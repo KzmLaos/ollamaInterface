@@ -13,7 +13,13 @@ then
 	bash
 elif [ "$A" == "model" ];
 then 
-	ollama run $2
+	i=1
+	while [[ "$i" != "0" ]]
+	do
+		ollama pull $2
+		i=$?
+		echo $i
+	done
 else
 	echo "unknown input"
 fi
