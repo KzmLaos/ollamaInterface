@@ -17,7 +17,7 @@ USER root
 #RUN python3 -m venv /home/debian/env/python
 #RUN source /home/debian/env/python/bin/activate
 RUN pip3 install --upgrade pip --break-system-packages
-RUN pip3 install numpy jupyter pandas joblib xgboost scikit-image scikit-learn python-afl voila ipyvuetify jupyter_contrib_nbextensions voila-vuetify bqplot deap --break-system-packages
+RUN pip3 install numpy jupyter pandas joblib xgboost scikit-image scikit-learn python-afl voila ipyvuetify jupyter_contrib_nbextensions jupyter_nbextensions_configurator voila-vuetify bqplot deap --break-system-packages
 RUN pip3 install ipywidgets ollama --break-system-packages
 
 #Installing Ollama
