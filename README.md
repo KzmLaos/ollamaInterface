@@ -5,7 +5,7 @@ This is a simple Python API to make an interface to Ollama
 
 # Docker
 
-To run the docker container in Mac, simply use:
+To run the docker container in Mac, simply use :
 ```
 sudo docker run -it --rm -p 8888:8888 ollamainterface:latest
 ```
